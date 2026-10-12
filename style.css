@@ -632,8 +632,8 @@ footer p{
   .qualification { padding: 20px; }
   .qualification-text { width: 100%; min-height: 0; margin: 0; padding: 40px clamp(20px, 5vw, 50px); box-sizing: border-box; }
   .qualification-text h1, .qualification-text span { margin-left: 0; }
-  .qua-image { width: 100%; padding-left: 15%; box-sizing: border-box; }
-  .qua-image img { width: 80%; margin-top: 45px; }
+  .qua-image { width: 100%; padding-left: 0; box-sizing: border-box; }
+  .qua-image img { display: block; width: 100%; max-width: 100%; margin-top: 45px; }
 
   .skills-text { padding: 40px 0 20px; }
   .skills-boxes { grid-template-columns: 1fr; gap: 20px; margin: 0 20px; width: auto; }
@@ -673,8 +673,6 @@ footer p{
 
 @media (max-width: 480px) {
   .home-image { width: 80%; }
-  .qua-image { padding-left: 0; }
-  .qua-image img { width: 100%; max-width: 100%; margin-left: 0; }
   .home-text h1 { font-size: 26px; }
   .contact-text h1 { font-size: 30px; }
   .about-image { height: 220px; }
