@@ -673,6 +673,8 @@ footer p{
 
 @media (max-width: 480px) {
   .home-image { width: 80%; }
+  .qua-image { padding-left: 0; }
+  .qua-image img { width: 100%; max-width: 100%; margin-left: 0; }
   .home-text h1 { font-size: 26px; }
   .contact-text h1 { font-size: 30px; }
   .about-image { height: 220px; }
