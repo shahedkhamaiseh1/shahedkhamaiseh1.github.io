@@ -996,3 +996,13 @@ footer p {
     font-size: 16px;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(17, 17, 17);
+  }
+  nav {
+    background-color: rgb(141, 109, 151);
+  }
+}
