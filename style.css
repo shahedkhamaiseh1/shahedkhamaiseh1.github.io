@@ -18,6 +18,11 @@ section {
   padding: 20px;
 }
 
+:root {
+  color-scheme: only light;
+}
+
+
 
 /* =====================================================
    NAVBAR
