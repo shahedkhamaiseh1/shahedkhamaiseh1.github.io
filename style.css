@@ -2,7 +2,12 @@
    GENERAL
    ===================================================== */
 
+:root {
+  color-scheme: light dark;
+}
+
 body {
+  color: black;
   font-family: sans-serif;
   background-color: rgb(17, 17, 17);
   overflow-x: hidden;
@@ -142,6 +147,7 @@ button {
   font-size: 17px;
   border: 0;
   border-radius: 15px;
+  color: black;
   background-color: rgb(180, 161, 186);
   transition: transform 0.2s;
 }
