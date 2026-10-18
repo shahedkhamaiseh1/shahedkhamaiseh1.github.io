@@ -261,7 +261,7 @@
     </div>
 
     <div class="con-image">
-      <img id="contactImg" src="img/contactt-transparent.png" alt="contact">
+      <img src="img/contact.png" alt="Contact">
     </div>
 
   </section>
@@ -302,24 +302,6 @@
     nav.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => setMenu(false));
     });
-  </script>
-
-  <!-- ////////////////// CONTACT IMAGE SWAP (Samsung + dark) ////////////////// -->
-  <script>
-    const isSamsungInternet = /SamsungBrowser/i.test(navigator.userAgent);
-    const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const contactImg = document.getElementById('contactImg');
-    const lightContactImage = 'img/contactt-transparent.png';
-    const darkContactImage = 'img/contact-transparent.png';
-
-    function updateContactImage() {
-      contactImg.src = isSamsungInternet && darkQuery.matches
-        ? darkContactImage
-        : lightContactImage;
-    }
-
-    updateContactImage();
-    darkQuery.addEventListener('change', updateContactImage);
   </script>
 
 </body>
