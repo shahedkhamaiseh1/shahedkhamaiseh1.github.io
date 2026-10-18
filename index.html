@@ -320,6 +320,18 @@
     darkQuery.addEventListener('change', updateContactImage);
   </script>
 
+  <!-- DEBUG: احذف هالبلوك بعد ما تخلص الفحص -->
+  <script>
+    (function () {
+      var d = document.createElement('div');
+      d.style.cssText = 'position:fixed;top:70px;left:10px;right:10px;z-index:3000;padding:8px 12px;background:#fff;color:#000;font:13px monospace;border:2px solid red;';
+      d.textContent = 'samsung=' + /SamsungBrowser/i.test(navigator.userAgent) +
+        ' | dark=' + window.matchMedia('(prefers-color-scheme: dark)').matches +
+        ' | img=' + document.getElementById('contactImg').getAttribute('src');
+      document.body.appendChild(d);
+    })();
+  </script>
+
 </body>
 
 </html>
