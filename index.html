@@ -5,7 +5,9 @@
   <meta charset="utf-8" />
   <title>Shahed Khamaiseh | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="darkreader-lock">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
@@ -300,28 +302,6 @@
     nav.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => setMenu(false));
     });
-  </script>
-
-  <!-- ////////////////// SAMSUNG BROWSER NOTICE ////////////////// -->
-  <script>
-    if (/SamsungBrowser/i.test(navigator.userAgent)) {
-      const url = location.href;
-      const chromeLink = 'intent://' + location.host + location.pathname +
-        '#Intent;scheme=https;package=com.android.chrome;end';
-
-      document.body.innerHTML = `
-        <div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;text-align:center;background:#111;color:#e8e2d8;font-family:sans-serif;">
-          <h2>Please open this page in Chrome or another browser</h2>
-          <p style="max-width:420px;line-height:1.6;">This page is best viewed outside Samsung Internet.</p>
-          <a href="${chromeLink}" style="padding:12px 24px;background:#b4a1ba;color:#000;border-radius:15px;text-decoration:none;">Open in Chrome</a>
-          <button id="copyLink" style="width:auto;height:auto;padding:12px 24px;margin:0;cursor:pointer;">Copy link</button>
-        </div>`;
-
-      document.getElementById('copyLink').onclick = function () {
-        navigator.clipboard.writeText(url);
-        this.textContent = 'Copied!';
-      };
-    }
   </script>
 
 </body>
