@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <title>Shahed Khamaiseh | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark">
-  <meta name="supported-color-schemes" content="light dark">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
   <meta name="darkreader-lock">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -261,7 +261,7 @@
     </div>
 
     <div class="con-image">
-      <img id="contactImg" src="img/contactt.png" alt="contact">
+      <img id="contactImg" src="img/contactt-transparent.png" alt="contact">
     </div>
 
   </section>
@@ -306,14 +306,16 @@
 
   <!-- ////////////////// CONTACT IMAGE SWAP (Samsung + dark) ////////////////// -->
   <script>
-    const isSamsung = /SamsungBrowser/i.test(navigator.userAgent);
+    const isSamsungInternet = /SamsungBrowser/i.test(navigator.userAgent);
     const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const contactImg = document.getElementById('contactImg');
+    const lightContactImage = 'img/contactt-transparent.png';
+    const darkContactImage = 'img/contact-transparent.png';
 
     function updateContactImage() {
-      contactImg.src = (isSamsung && darkQuery.matches)
-        ? 'img/contact.png'
-        : 'img/contactt.png';
+      contactImg.src = isSamsungInternet && darkQuery.matches
+        ? darkContactImage
+        : lightContactImage;
     }
 
     updateContactImage();
