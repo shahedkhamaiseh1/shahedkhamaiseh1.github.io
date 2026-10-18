@@ -2,9 +2,9 @@
    GENERAL
    ===================================================== */
 
-/* الموقع داكن بالتصميم، فنعرّفه للمتصفح كداكن عشان ما يقلب الألوان */
+/* منع الدارك مود الإجباري في المتصفحات (Samsung Internet) والحفاظ على ألوان التصميم */
 :root {
-  color-scheme: dark;
+  color-scheme: only light;
 }
 
 html {
@@ -998,4 +998,25 @@ footer p {
   .timeline-item {
     font-size: 16px;
   }
+}
+
+
+/* =====================================================
+   ANTI FORCED-DARK (Samsung Internet)
+   خليها دايماً بآخر الملف
+   المتصفح بيعامل الـ gradient كأنه صورة فبيتجنب يغيّر لونه
+   ===================================================== */
+
+.experience-text,
+.qualification-text,
+.skills-item1,
+.skills-item2,
+.projects-item1,
+.projects-item2,
+.home-text button {
+  background-image: linear-gradient(rgb(180, 161, 186), rgb(180, 161, 186));
+}
+
+nav {
+  background-image: linear-gradient(rgb(141, 109, 151), rgb(141, 109, 151));
 }
