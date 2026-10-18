@@ -2,6 +2,16 @@
    GENERAL
    ===================================================== */
 
+/* الموقع داكن بالتصميم، فنعرّفه للمتصفح كداكن عشان ما يقلب الألوان */
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(17, 17, 17);
+}
+
 body {
   font-family: sans-serif;
   background-color: rgb(17, 17, 17);
@@ -9,17 +19,9 @@ body {
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 section {
   min-height: 100vh;
   padding: 20px;
-}
-
-:root {
-  color-scheme: light;
 }
 
 
@@ -145,6 +147,7 @@ button {
   height: 45px;
   margin: 5px;
   font-size: 17px;
+  color: #111;
   border: 0;
   border-radius: 15px;
   background-color: rgb(180, 161, 186);
@@ -994,15 +997,5 @@ footer p {
 
   .timeline-item {
     font-size: 16px;
-  }
-}
-
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(17, 17, 17);
-  }
-  nav {
-    background-color: rgb(141, 109, 151);
   }
 }
