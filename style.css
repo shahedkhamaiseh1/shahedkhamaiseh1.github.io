@@ -2,10 +2,6 @@
    GENERAL
    ===================================================== */
 
-:root {
-  color-scheme: only light;
-}
-
 body {
   font-family: sans-serif;
   background-color: rgb(17, 17, 17);
@@ -14,6 +10,7 @@ body {
 }
 
 html {
+  color-scheme: only light;
   scroll-behavior: smooth;
 }
 
@@ -37,6 +34,7 @@ nav {
   gap: 10px 12px;
   padding: 15px 30px 25px 20px;
   font-size: 17px;
+  border-bottom: 5px solid rgb(0, 0, 0);
   background-color: rgb(141, 109, 151);
 }
 
