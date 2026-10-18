@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <title>Shahed Khamaiseh | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="only light">
-  <meta name="supported-color-schemes" content="light">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <meta name="darkreader-lock">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -261,7 +261,7 @@
     </div>
 
     <div class="con-image">
-      <img id="contactImg" src="img/contact.png" alt="contact">
+      <img id="contactImg" src="img/contactt.png" alt="contact">
     </div>
 
   </section>
@@ -312,24 +312,12 @@
 
     function updateContactImage() {
       contactImg.src = (isSamsung && darkQuery.matches)
-        ? 'img/contactt.png'
-        : 'img/contact.png';
+        ? 'img/contact.png'
+        : 'img/contactt.png';
     }
 
     updateContactImage();
     darkQuery.addEventListener('change', updateContactImage);
-  </script>
-
-  <!-- DEBUG: احذف هالبلوك بعد ما تخلص الفحص -->
-  <script>
-    (function () {
-      var d = document.createElement('div');
-      d.style.cssText = 'position:fixed;top:70px;left:10px;right:10px;z-index:3000;padding:8px 12px;background:#fff;color:#000;font:13px monospace;border:2px solid red;';
-      d.textContent = 'samsung=' + /SamsungBrowser/i.test(navigator.userAgent) +
-        ' | dark=' + window.matchMedia('(prefers-color-scheme: dark)').matches +
-        ' | img=' + document.getElementById('contactImg').getAttribute('src');
-      document.body.appendChild(d);
-    })();
   </script>
 
 </body>
